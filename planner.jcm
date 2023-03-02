@@ -1,0 +1,16 @@
+mas planning_mas {
+
+    agent hanoi_planner {
+        goals: start
+        join: planning_workspace
+        focus: planning_workspace.planner
+    }
+
+    workspace planning_workspace  {
+        /*
+         * The planner artifact may also be instantiated with the path to a native planner.
+         */
+        artifact planner : org.hypermedea.PlannerArtifact()
+    }
+
+}
